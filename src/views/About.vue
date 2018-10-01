@@ -10,6 +10,7 @@
 import animationData from "../assets/animation/splashy_loader.json";
 import Lottie from "../../node_modules/vue-lottie/src/lottie.vue";
 import { Component, Vue } from "vue-property-decorator";
+import axios from 'axios';
 
 @Component({
   components: {
@@ -17,30 +18,21 @@ import { Component, Vue } from "vue-property-decorator";
   }
 })
 export default class About extends Vue {
-    defaultOptions = { animationData };
+    defaultOptions = {animationData};
     anim: any;
 
     handleAnimation(anim: any) {
         this.anim = anim;
     }
 
-    log(){
+    log() {
         // DO GET REQUEST
-        const axios = require('axios');
-
+        console.log("GET REQUEST:");
         axios.get('http://localhost:50993/api/journey')
-  .then(functio (response) {
-    // handle success
-    console.log(response);
-  })
-  .catch(functio (error) {
-    // handle error
-    console.log(error);
-  })
-  .then(functio () {
-    // always executed
-  });
-
+            .then((response) => {
+                // handle success
+                console.log(response);
+            });
     }
 }
 </script>
