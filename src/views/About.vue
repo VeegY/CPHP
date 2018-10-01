@@ -1,5 +1,6 @@
 <template>
     <div class="about">
+        <button @click="log">GET REQUEST</button>
         <Lottie :options="defaultOptions" :height="400" :width="400" @animCreated="handleAnimation"></Lottie>
     </div>
 </template>
@@ -21,6 +22,12 @@ export default class About extends Vue {
 
     handleAnimation(anim: any) {
         this.anim = anim;
+    }
+
+    log(){
+        // DO GET REQUEST
+        const answer = "";
+        console.log("GOT:", answer);
     }
 }
 </script>
