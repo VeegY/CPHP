@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@types/i18n": "^0.8.3",
+    "axios": "^0.18.0",
     "vue": "^2.5.17",
     "vue-class-component": "^6.0.0",
     "vue-i18n": "^8.1.0",
