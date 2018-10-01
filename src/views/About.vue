@@ -1,5 +1,26 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+    <div class="about">
+        <Lottie :options="defaultOptions" :height="400" :width="400" @animCreated="handleAnimation"></Lottie>
+    </div>
 </template>
+
+
+<script lang="ts">
+import animationData from "../assets/animation/splashy_loader.json";
+import Lottie from "../../node_modules/vue-lottie/src/lottie.vue";
+import { Component, Vue } from "vue-property-decorator";
+
+@Component({
+  components: {
+    Lottie
+  }
+})
+export default class About extends Vue {
+    defaultOptions = { animationData };
+    anim: any;
+
+    handleAnimation(anim: any) {
+        this.anim = anim;
+    }
+}
+</script>
