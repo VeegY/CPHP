@@ -1,31 +1,35 @@
 # CPHP
 
+A web development project to build the worlds best holiday planer there is!
+
+## Getting Started
+
+- Get the npm package manager by installing [node.js](https://nodejs.org/en/).
+- Get the vue-cli via:
+```
+npm install vue-cli
+```
+
 ## Project setup
+
+To install all dependencies run the following command after a clone/fork:
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+## Building for development
+
+While developing for a hot-reload version use:
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### Other possible scripts:
 ```
 npm run build
-```
-
-### Lints and fixes files
-```
 npm run lint
-```
-
-### Run your unit tests
-```
 npm run test:unit
-```
-
-### Run your end-to-end tests
-```
 npm run test:e2e
 ```
+
+
