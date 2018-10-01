@@ -28,7 +28,11 @@ export default class About extends Vue {
     log() {
         // DO GET REQUEST
         console.log("GET REQUEST:");
-        axios.get('http://localhost:50993/api/journey')
+        const url: string = 'http://localhost:50993/api/journey';
+
+        fetch(url).then((data) => console.log(data));
+
+        axios.get(url)
             .then((response) => {
                 // handle success
                 console.log(response);
